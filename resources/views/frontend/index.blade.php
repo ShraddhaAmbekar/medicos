@@ -25,7 +25,7 @@
                             <span class="icon cr-ln-orange1 fsz-35"> <i class="fal fa-envelope"></i> </span>
                             <div class="cont">
                                 <small> Contact Mail </small>
-                                <h6> <a href="#" class="lnk"> medicosmindz@gmail.com </a> </h6>
+                                <h6> <a href="#" class="lnk"> medicosmindz@gmail.com</a> </h6>
                             </div>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
         <img src="{{ asset('frontend/assets/img/top_circle.png ') }}" alt="" class="float-circle rotate-center">
         <img src="{{ asset('frontend/assets/img/3d_circle.png ') }}" alt="" class="circle-3d rotate-center">
     </header>
-    <!--  End header  -->
+    <!--  header ended -->
 
 
 <div class="container">
