@@ -20,7 +20,7 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="img mt-5 mt-lg-0">
-                        <img src="{{ asset('universities/kutaiaisi.png') }}" alt="">
+                        <img src="{{ asset('universities/banner.webp') }}" alt="">
                         <div class="contact-card">
                             <span class="icon cr-ln-orange1 fsz-35"> <i class="fal fa-envelope"></i> </span>
                             <div class="cont">
