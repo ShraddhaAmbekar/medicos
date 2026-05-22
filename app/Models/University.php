@@ -8,7 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class University extends Model
 {
     use HasFactory;
+
     protected $guarded = [];
+
+    // Route model binding using slug
+    public function getRouteKeyName()
+    {
+        return 'university_slug';
+    }
 
     public function country()
     {
@@ -24,6 +31,4 @@ class University extends Model
     {
         return $this->hasMany(AvailableCourse::class);
     }
-
-    
 }

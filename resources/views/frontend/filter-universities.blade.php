@@ -158,7 +158,10 @@
                                     </div>
 
                                     <div class="col-md-3 text-center">
-                                        <a href="{{ route('about-university', ['slug' => $university->slug]) }}"
+                                        <a href="{{ route('about-university', [
+    'course' => $university->studyAreas->first()?->course?->courses_slug,
+    'university' => $university->university_slug
+]) }}"
                                             class="educate-btn"
                                             style="border:none;width:150px;padding:10px;border-radius:10px;background: #d05d5b;"
                                             type="button">

@@ -177,14 +177,31 @@ your dream career with MEDICOS MINDZ.</p>
                             @foreach($universities as $university)
                             <div class="col-lg-4 ">
                                 <div class="post-card wow fadeInUp slow" data-wow-delay="0.2s" style="height:100%;">
-                                    <a href="{{ route('about-university', ['slug' => $university->slug]) }}" class="img">
+                                    <a href="{{ route('about-university', [
+   'course' => optional(optional($university->studyAreas->first())->course)->courses_slug ?? 'mbbs',
+    'university' => $university->university_slug
+]) }}" class="img">
                                         <img src="{{ asset('universities/' . $university->image) }}" alt="" class="img-cover">
                                         <!--<span class="float-arrow"> <img src="{{ asset('universities/' . $university->logo) }}" alt=""  style="border-radius:50%;"> </span>-->
                                     </a>
-                                     <div class="info">
-                                        <h4> <a href="{{ route('about-university', ['slug' => $university->slug]) }}" class="fsz-24 hover-orange1"> {{ $university->name }} </a> </h4>
-                                        <a href="{{ route('apply-now') }}" class="butn bg-ln-orange1 rounded-pill text-white fsz-16 mt-20 py-2"> <span> Apply Now </span> </a>
-                                    </div>
+                                   <div class="info">
+    <h4>
+        <a href="{{ route('about-university', [
+            'course' => optional(optional($university->studyAreas->first())->course)->courses_slug ?? 'mbbs',
+            'university' => $university->university_slug
+        ]) }}"
+        class="fsz-24 hover-orange1">
+
+            {{ $university->name }}
+
+        </a>
+    </h4>
+
+    <a href="{{ route('apply-now') }}"
+       class="butn bg-ln-orange1 rounded-pill text-white fsz-16 mt-20 py-2">
+        <span> Apply Now </span>
+    </a>
+</div>
                                 </div>
                             </div>
                             @endforeach
